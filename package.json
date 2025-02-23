@@ -1,0 +1,32 @@
+{
+  "name": "magine",
+  "version": "1.0.0",
+  "description": "Just an idea at the moment",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@scryfall/api-types": "^1.0.0-alpha.4",
+    "@types/node": "^22.13.4",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.1",
+    "prettier-plugin-brace-style": "^0.7.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1",
+    "vitest": "^3.0.6"
+  },
+  "dependencies": {
+    "@commander-js/extra-typings": "^13.1.0",
+    "@opendocsg/pdf2md": "^0.2.1",
+    "commander": "^13.1.0",
+    "debug": "^4.4.0"
+  }
+}
