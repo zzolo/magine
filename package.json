@@ -25,8 +25,12 @@
   },
   "dependencies": {
     "@commander-js/extra-typings": "^13.1.0",
+    "@dotenvx/dotenvx": "^1.38.4",
     "@opendocsg/pdf2md": "^0.2.1",
+    "chalk": "^5.4.1",
     "commander": "^13.1.0",
-    "debug": "^4.4.0"
+    "debug": "^4.4.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
   }
 }

@@ -1,4 +1,4 @@
-import { randomInt } from 'crypto';
+import { randomInt, randomUUID } from 'crypto';
 import type { CoinFlip } from '../types';
 
 /**
@@ -33,4 +33,12 @@ export function shuffle<T>(array: T[]): T[] {
     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
   return shuffled;
+}
+
+/**
+ * Generate an id with a prefix.
+ *
+ */
+export function generateId(prefix: string = ''): string {
+  return `${prefix}-${randomUUID()}`;
 }

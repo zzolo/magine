@@ -5,6 +5,9 @@
 import { Card } from './Card';
 import { defaultPhases, defaultSteps } from './constants/phases-turns';
 
+// Generic event handler
+type EventHandler<T = any> = (eventData: T) => void;
+
 // https://scryfall.com/docs/api/colors
 type CardColor = 'W' | 'U' | 'B' | 'R' | 'G';
 
@@ -74,3 +77,33 @@ type CardModifierFunction = (card: Card) => CardModifier;
 
 // Coin flip result
 type CoinFlip = 'heads' | 'tails';
+
+// Game queue state change
+type GameQueueStateChange = {
+  objectId: string;
+  state: Record<string, unknown>;
+  previousState?: Record<string, unknown>;
+  timestamp: number;
+};
+
+// Game queue input request
+type GameQueueInputRequest = {
+  objectId: string;
+  requestId: string;
+  playerId: string;
+  inputIds: string[];
+  timestamp: number;
+};
+
+// Game queue input response
+type GameQueueInputResponse = {
+  objectId: string;
+  requestId: string;
+  playerId: string;
+  inputId: string;
+  input: string;
+  timestamp: number;
+};
+
+// Union type for event history
+type GameQueueEvent = GameQueueStateChange | GameQueueInputRequest | GameQueueInputResponse;

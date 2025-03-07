@@ -1,11 +1,13 @@
 import debugGenerator from 'debug';
+import { Core } from './Core';
 import { Player } from './Player';
 import { Turn } from './Turn';
 import { shuffle } from './utilities/random';
 
 const debug = debugGenerator('magine:game');
 
-export class Game {
+export class Game extends Core {
+  type = 'game';
   players: Player[];
   activePlayer: Player;
   losers: Player[];
@@ -23,6 +25,7 @@ export class Game {
    * @param {Object} obj - An object with properties to assign.
    */
   constructor(obj: Partial<Game> = {}) {
+    super();
     debug('Game constructor called with %o', obj);
     Object.assign(this, obj);
   }
